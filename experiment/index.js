@@ -1,10 +1,11 @@
 import Koa from 'koa'
 import session from 'koa-session'
 import config from './config'
-import router from './router'
+import router from './spring'
 import views from 'koa-views'
 import bodyParser from 'koa-bodyparser'
 import middleware from './middleware'
+import './controller'
 
 let app = new Koa();
 

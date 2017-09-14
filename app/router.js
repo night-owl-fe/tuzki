@@ -1,10 +1,13 @@
 import Router from 'koa-router'
-import api, { jsonp } from './controller/api'
+import api, { admin } from './controller/api'
+import view from './controller/view'
 
 const router = new Router()
 
-router.get('/api', api);
-router.get('/api/jsonp', jsonp);
+router.post('/api/search', api);
+
+router.get('/view', view);
+// router.post('/admin/setting/hasAlreadySetting', admin);
 
 export default router
 
